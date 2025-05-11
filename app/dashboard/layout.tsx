@@ -7,7 +7,10 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
     <SidebarProvider>
       <AppSidebar />
       <SidebarTrigger />
-      <main>{children}</main>
+      <main className="w-full h-full flex-1">
+        {children}
+      </main>
+
     </SidebarProvider>
   );
 };
