@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { QrCode, Settings, CreditCard } from "lucide-react";
 
 import {
@@ -11,21 +12,20 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-// Updated menu items.
 const items = [
   {
     title: "Cashier",
-    url: "#",
+    url: "/dashboard/cashier",
     icon: CreditCard,
   },
   {
     title: "QR Code",
-    url: "#",
+    url: "/dashboard/qr-code",
     icon: QrCode,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/dashboard/settings",
     icon: Settings,
   },
 ];
@@ -41,10 +41,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon className="w-4 h-4" />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
