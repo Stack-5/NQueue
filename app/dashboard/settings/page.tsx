@@ -40,20 +40,18 @@ const CashierInfoCard = () => {
           {/* Profile Picture */}
           <div className="h-20 w-20 rounded-full overflow-hidden border-2 border-primary">
             <img
-              src="/profile-placeholder.png" // Replace with actual profile image path
+              src="/profile-placeholder.png" 
               alt="Cashier Profile"
               className="h-full w-full object-cover"
             />
           </div>
 
-          {/* Title & Status */}
           <div>
             <CardTitle className="text-3xl font-bold">Cashier</CardTitle>
             <p className="text-sm text-muted-foreground mt-1">
               Petracorta, Romnoel E.
             </p>
 
-            {/* Status badge */}
             <div className="mt-2 inline-flex items-center space-x-2">
               <span className="h-3 w-3 rounded-full bg-green-500"></span>
               <span className="text-sm font-medium text-green-600">Active</span>
@@ -82,7 +80,6 @@ const CashierInfoCard = () => {
             <span className="text-foreground">2</span>
           </div>
 
-          {/* Extra info */}
           <div className="flex justify-between text-sm font-medium">
             <span className="text-muted-foreground">Email:</span>
             <span>romnoel.petracorta@example.com</span>
@@ -94,7 +91,6 @@ const CashierInfoCard = () => {
           </div>
         </CardContent>
 
-        {/* Buttons */}
         <div className="flex justify-end space-x-4 pt-2">
           <Button variant="outline">Edit Profile</Button>
           <Button variant="destructive">Log Out</Button>

@@ -11,7 +11,6 @@ const Cashier = () => {
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 py-12 bg-background text-foreground gap-12">
-      {/* LEFT SIDE - Queue Info */}
       <div className="space-y-6 w-full max-w-md mx-auto">
         <Card className="border border-border shadow-md bg-card text-card-foreground">
           <CardHeader>
@@ -39,7 +38,6 @@ const Cashier = () => {
           </CardContent>
         </Card>
 
-        {/* Recently Served - Styled */}
         <div className="mt-4 space-y-3">
           <h3 className="text-base font-semibold text-foreground">Recently Served</h3>
           <ul className="space-y-2">
@@ -56,7 +54,6 @@ const Cashier = () => {
         </div>
       </div>
 
-      {/* RIGHT SIDE - Controls */}
       <div className="flex flex-col items-center justify-center space-y-8">
         <div className="text-center">
           <h1 className="text-7xl font-extrabold text-primary tracking-wide">A017</h1>
