@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { QrCode, Settings, CreditCard, LogOut, User2, ChevronUp } from "lucide-react";
-
+import { ThemeToggle } from "../components/theme-toggle.tsx";
 import {
   Sidebar,
   SidebarContent,
@@ -55,7 +55,10 @@ export function AppSidebar() {
                 const isActive = pathname === item.url;
                 return (
                   <SidebarMenuItem key={item.title} aria-current={isActive ? "page" : undefined}>
-                    <SidebarMenuButton asChild className={isActive ? "bg-primary text-primary-foreground" : ""}>
+                    <SidebarMenuButton
+                      asChild
+                      className={isActive ? "bg-primary text-primary-foreground" : ""}
+                    >
                       <Link href={item.url} className="flex items-center space-x-2">
                         <item.icon className="w-4 h-4" />
                         <span>{item.title}</span>
@@ -69,7 +72,11 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="border-t pt-4">
+      <SidebarFooter>
+        <div className="px-4 py-2 border-b mb-2">
+          <ThemeToggle />
+        </div>
+
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
@@ -83,7 +90,7 @@ export function AppSidebar() {
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent side="top" className="w-[var(--radix-popper-anchor-width)]">
-                                               <DropdownMenuItem className="flex items-center space-x-2 text-destructive cursor-pointer">
+                <DropdownMenuItem className="flex items-center space-x-2 text-destructive cursor-pointer">
                   <LogOut className="w-4 h-4" />
                   <span>Sign out</span>
                 </DropdownMenuItem>
